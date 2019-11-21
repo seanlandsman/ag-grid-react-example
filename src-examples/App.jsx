@@ -14,6 +14,7 @@ import fragmentsFuncRendererCreateDestroyExample from './fragmentsFuncRendererCr
 import funcRendererWithNanExample from './funcRendererWithNan/GridComponent';
 import flickerExample from './flickerExample/GridExample';
 import memoExample from './memoizedRenderer/GridComponent';
+import nullExample from './nullRenderer/GridComponent';
 
 const SideBar = () => (
     <div style={{float: "left", width: 335, marginRight: 25}}>
@@ -30,6 +31,7 @@ const SideBar = () => (
             <NavItem to='/funcRendererWithNan'>funcRendererWithNan</NavItem>
             <NavItem to='/flickerExample'>flicker issue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/memo'>memoized renderer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/null'>null renderer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
         </ul>
     </div>
 );
@@ -54,6 +56,7 @@ class App extends Component {
                         <Route exact path='/funcRendererWithNan' component={funcRendererWithNanExample} />
                         <Route exact path='/flickerExample' component={flickerExample} />
                         <Route exact path='/memo' component={memoExample} />
+                        <Route exact path='/null' component={nullExample} />
                     </Switch>
                 </div>
             </div>
