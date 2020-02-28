@@ -12,9 +12,11 @@ import deltaRowModeRefreshCompRendererExample from './deltaRowModeRefreshCompRen
 import floatingFilterExampleExample from './floatingFilterExample/GridComponent';
 import fragmentsFuncRendererCreateDestroyExample from './fragmentsFuncRendererCreateDestroy/GridComponent';
 import funcRendererWithNanExample from './funcRendererWithNan/GridComponent';
-import flickerExample from './flickerExample/GridExample';
+import flickerExample from './flickerExample/GridComponent';
+import flickerExample2 from './flickerExample2/GridComponent';
 import memoExample from './memoizedRenderer/GridComponent';
 import nullExample from './nullRenderer/GridComponent';
+import amazonExample from './amazon/index';
 
 const SideBar = () => (
     <div style={{float: "left", width: 335, marginRight: 25}}>
@@ -30,8 +32,10 @@ const SideBar = () => (
             <NavItem to='/>fragmentsFuncRendererCreateDestroy'>fragmentsFuncRendererCreateDestroy</NavItem>
             <NavItem to='/funcRendererWithNan'>funcRendererWithNan</NavItem>
             <NavItem to='/flickerExample'>flicker issue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/flickerExample2'>flicker issue 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/memo'>memoized renderer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/null'>null renderer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/amazon'>amazon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
         </ul>
     </div>
 );
@@ -55,8 +59,10 @@ class App extends Component {
                         <Route exact path='/>fragmentsFuncRendererCreateDestroy' component={fragmentsFuncRendererCreateDestroyExample}/>
                         <Route exact path='/funcRendererWithNan' component={funcRendererWithNanExample} />
                         <Route exact path='/flickerExample' component={flickerExample} />
+                        <Route exact path='/flickerExample2' component={flickerExample2} />
                         <Route exact path='/memo' component={memoExample} />
                         <Route exact path='/null' component={nullExample} />
+                        <Route exact path='/amazon' component={amazonExample} />
                     </Switch>
                 </div>
             </div>

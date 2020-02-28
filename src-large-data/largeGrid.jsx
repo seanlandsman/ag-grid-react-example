@@ -63,7 +63,7 @@ export default class MyApp extends Component {
 
     render() {
         return (
-            <div style={{height: '100%'}} className="ag-theme-fresh">
+            <div style={{height: '100%'}} className="ag-theme-alpine">
                 <AgGridReact columnDefs={this.state.columnDefs} rowData={this.state.rowData} modules={AllModules}/>
             </div>
         );
