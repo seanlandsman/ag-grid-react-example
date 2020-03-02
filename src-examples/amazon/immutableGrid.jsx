@@ -5,9 +5,9 @@ import { render } from "react-dom";
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
 import { AgGridReact } from "@ag-grid-community/react";
-import { AllCommunityModules } from "@ag-grid-community/all-modules";
-import "@ag-grid-community/all-modules/dist/styles/ag-grid.css";
-import "@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css";
+import { AllModules } from "@ag-grid-enterprise/all-modules";
+import "@ag-grid-enterprise/all-modules/dist/styles/ag-grid.css";
+import "@ag-grid-enterprise/all-modules/dist/styles/ag-theme-balham.css";
 import NameGetterRenderer from "./nameGetterRenderer.jsx";
 import SizeRenderer from "./sizeRenderer.jsx";
 import { actions } from "./immutableStore.jsx";
@@ -18,14 +18,10 @@ class GenericGrid extends Component {
     super(props);
 
     this.state = {
-      modules: AllCommunityModules,
+      modules: AllModules,
     };
   }
   
-  componentDidUpdate = params => {
-    console.log(params);
-  }
-
   onGridReady = params => {
     this.gridApi = params.api;
     this.gridColumnApi = params.columnApi;

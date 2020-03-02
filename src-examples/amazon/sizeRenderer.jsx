@@ -9,10 +9,7 @@ export default class SizeRenderer extends Component {
         };
     }
     
-    componentDidUpdate = params => {
-      console.log(params);
-    }
-    
+
     handleOnChange = event => {
       this.setState({
         size: event.target.value,

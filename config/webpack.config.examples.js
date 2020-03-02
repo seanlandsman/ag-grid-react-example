@@ -3,7 +3,8 @@ const path = require('path');
 const SRC_DIR = path.resolve(__dirname, '../src-examples');
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
+    devtool: 'inline-source-map',
     entry: SRC_DIR + "/index.js",
     output: {
         path: path.resolve(__dirname, '../'),
