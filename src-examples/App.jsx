@@ -18,6 +18,7 @@ import memoExample from './memoizedRenderer/GridComponent';
 import nullExample from './nullRenderer/GridComponent';
 import amazonExample from './amazon/index';
 import groupedRowsExample from './groupedRows/GridComponent';
+import interactiveComponentExample from './interactiveComponentExample/GridComponent';
 
 const SideBar = () => (
     <div style={{float: "left", width: 335, marginRight: 25}}>
@@ -38,6 +39,7 @@ const SideBar = () => (
             <NavItem to='/null'>null renderer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/amazon'>amazon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/groupedRows'>grouped row&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/interactiveComponentExample'>interactive renderer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
         </ul>
     </div>
 );
@@ -66,6 +68,7 @@ class App extends Component {
                         <Route exact path='/null' component={nullExample} />
                         <Route exact path='/amazon' component={amazonExample} />
                         <Route exact path='/groupedRows' component={groupedRowsExample} />
+                        <Route exact path='/interactiveComponentExample' component={interactiveComponentExample} />
                     </Switch>
                 </div>
             </div>
