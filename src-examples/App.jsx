@@ -20,6 +20,7 @@ import nullExample from './nullRenderer/GridComponent';
 import amazonExample from './amazon/index';
 import groupedRowsExample from './groupedRows/GridComponent';
 import interactiveComponentExample from './interactiveComponentExample/GridComponent';
+import componentNestedExample from './componentNestedExample/GridComponent';
 
 const SideBar = () => (
     <div style={{float: "left", width: 335, marginRight: 25}}>
@@ -42,6 +43,7 @@ const SideBar = () => (
             <NavItem to='/amazon'>amazon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/groupedRows'>grouped row&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/interactiveComponentExample'>interactive renderer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/componentNestedExample'>nested components&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
         </ul>
     </div>
 );
@@ -72,6 +74,7 @@ class App extends Component {
                         <Route exact path='/amazon' component={amazonExample} />
                         <Route exact path='/groupedRows' component={groupedRowsExample} />
                         <Route exact path='/interactiveComponentExample' component={interactiveComponentExample} />
+                        <Route exact path='/componentNestedExample' component={componentNestedExample} />
                     </Switch>
                 </div>
             </div>
