@@ -22,6 +22,7 @@ import groupedRowsExample from './groupedRows/GridComponent';
 import interactiveComponentExample from './interactiveComponentExample/GridComponent';
 import componentNestedExample from './componentNestedExample/GridComponent';
 import useLayoutEffectExample from './useLayoutEffect/GridComponent';
+import slowRendererExample from './slowRendererExample/GridComponent';
 
 const SideBar = () => (
     <div style={{float: "left", width: 335, marginRight: 25}}>
@@ -46,6 +47,7 @@ const SideBar = () => (
             <NavItem to='/interactiveComponentExample'>interactive renderer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/componentNestedExample'>nested components&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/useLayoutEffectExample'>useLayoutEffectExample&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/slowRendererExample'>slowRendererExample&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
         </ul>
     </div>
 );
@@ -78,6 +80,7 @@ class App extends Component {
                         <Route exact path='/interactiveComponentExample' component={interactiveComponentExample} />
                         <Route exact path='/componentNestedExample' component={componentNestedExample} />
                         <Route exact path='/useLayoutEffectExample' component={useLayoutEffectExample} />
+                        <Route exact path='/slowRendererExample' component={slowRendererExample} />
                     </Switch>
                 </div>
             </div>

@@ -13,12 +13,17 @@ const CellRenderer1 = props => <span><b>Renderer 1: </b>{props.value}</span>;
 const CellRenderer2 = props => <span><i>Renderer 2: </i>{props.value}</span>;
 const HeaderRenderer = props => <span>{props.displayName} <Foo {...props} /></span>;
 
-const createRowData = n =>
-    Array(n).fill(0).map((_, i) => ({col1: i, col2: i, col3: i,}));
+const rowData = [];
+for (var i = 0; i < 5; i++) {
+    rowData.push({
+        col1: i, col2: i, col3: i,
+    });
+}
+
 
 const initialState = {
     modules: AllModules,
-    rowData: createRowData(5),
+    rowData,
     columnDefs: [
         {
             headerComponentFramework: HeaderRenderer,

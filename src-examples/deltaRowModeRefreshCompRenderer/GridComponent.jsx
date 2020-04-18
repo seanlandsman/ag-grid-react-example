@@ -36,10 +36,13 @@ const columnDefs = [
 
 let id = 0;
 
-const initialRowData = Array.from({length: INITIAL_ROWS}, () => ({
-    id: ++id,
-    data: `Data ${id}`
-}));
+const initialRowData = [];
+for (var i = 0; i < INITIAL_ROWS; i++) {
+    initialRowData.push({
+        id: ++id,
+        data: `Data ${id}`
+    });
+}
 
 const containerStyle = {
     height: "300px",

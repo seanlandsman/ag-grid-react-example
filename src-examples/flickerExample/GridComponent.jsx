@@ -2,13 +2,6 @@ import React from "react";
 import {AgGridReact} from "@ag-grid-community/react";
 import {AllModules} from "@ag-grid-enterprise/all-modules";
 
-const createRowData = n =>
-    Array(n).fill(0).map((_, i) => ({
-        col1: i,
-        col2: i,
-        col3: i,
-    }));
-
 const CellRenderer1 = props => {
     const { value } = props;
     return <div>{`Renderer 1: ${value}`}</div>
@@ -21,7 +14,14 @@ const CellRenderer3 = props => {
 export default class GridExample extends React.Component {
     constructor(props) {
         super(props);
-        this.rowData = createRowData(5000);
+        this.rowData = [];
+        for (var i = 0; i < 5000; i++) {
+            this.rowData.push({
+                col1: i,
+                col2: i,
+                col3: i,
+            });
+        }
 
         // when columnDefs state changes,
         // all columns with React cell renderers will flicker
