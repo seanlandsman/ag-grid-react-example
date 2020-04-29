@@ -88,7 +88,7 @@ export default function App() {
                     rowData={rowData}
                     modules={AllModules}
                     getRowNodeId={getRowNodeId}
-                    deltaRowDataMode
+                    immutableData
                 />
             </div>
             <button id="addNewRow" onClick={addNew}>Add New</button>

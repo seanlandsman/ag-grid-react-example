@@ -96,7 +96,7 @@ class GenericGrid extends Component {
               columnDefs={this.getColumnDefs()}
               rowData={this.props.tableData}
               onGridReady={this.onGridReady}
-              deltaRowDataMode={true}
+              immutableData={true}
               getRowNodeId={data => data.get('id')}
             />
           </div>

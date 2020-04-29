@@ -85,7 +85,7 @@ export default class extends Component {
                         rowData={rowData}
                         onGridReady={params => (this.gridApi = params.api)}
                         modules={AllModules}
-                        deltaRowDataMode
+                        immutableData
                         getRowNodeId={data => data.id}
                         reactNext={true}
                     />
