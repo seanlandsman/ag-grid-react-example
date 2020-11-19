@@ -4,7 +4,6 @@ import {AgGridReact} from "@ag-grid-community/react";
 import {AllModules} from "@ag-grid-enterprise/all-modules";
 
 const BooleanRenderer = memo(({data}) => (<> {data.value ? 'TRUE' : 'FALSE'} </>));
-// function BooleanRenderer({ data }) { return ( <> {data.value ? 'TRUE' : 'FALSE'} </> ); }
 
 const frameworkComponents = {
     booleanRenderer: BooleanRenderer

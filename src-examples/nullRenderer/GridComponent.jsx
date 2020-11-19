@@ -4,10 +4,6 @@ import {AgGridReact} from "@ag-grid-community/react";
 import {AllModules} from "@ag-grid-enterprise/all-modules";
 
 function NullRenderer({ data }) {
-    if (!data.value) {
-        return '';
-    }
-
     return (
         data.value
     );
