@@ -28,7 +28,6 @@ const gridOptions = {
             field: "a",
             headerName: "Column A",
             cellRendererFramework: ({value}) => {
-                if (SHOW_CONSOLE) console.log("render cellRendererFramework");
                 delay(SLOW_MOTION_DELAY_MS);
                 return <span style={{fontWeight: "bold"}}>{value}</span>;
             }

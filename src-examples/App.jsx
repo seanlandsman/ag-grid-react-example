@@ -15,14 +15,19 @@ import funcRendererWithNanExample from './funcRendererWithNan/GridComponent';
 import flickerExample from './flickerExample/GridComponent';
 import flickerExample2 from './flickerExample2/GridComponent';
 import flickerExample3 from './flickerExample3/GridComponent';
+import flickerExample4 from './flickerExample4/GridComponent';
+import contextFlicker from './contextFlicker/GridComponent';
 import memoExample from './memoizedRenderer/GridComponent';
+import updateHookProps from './updateHookProps/GridComponent';
 import nullExample from './nullRenderer/GridComponent';
 import amazonExample from './amazon/index';
 import groupedRowsExample from './groupedRows/GridComponent';
 import interactiveComponentExample from './interactiveComponentExample/GridComponent';
 import componentNestedExample from './componentNestedExample/GridComponent';
-import useLayoutEffectExample from './useLayoutEffect/GridComponent';
 import slowRendererExample from './slowRendererExample/GridComponent';
+import autoheightRendererExample from './autoheightRendererExample/GridComponent';
+import materialUI from './materialUI/GridComponent';
+import materialUI2 from './materialUI2/GridComponent';
 
 const SideBar = () => (
     <div style={{float: "left", width: 335, marginRight: 25}}>
@@ -40,14 +45,19 @@ const SideBar = () => (
             <NavItem to='/flickerExample'>flicker issue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/flickerExample2'>flicker issue 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/flickerExample3'>flicker issue 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/flickerExample4'>flicker issue 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/contextFlicker'>context flicker issue 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/memo'>memoized renderer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/updateHookProps'>update Hook Props&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/null'>null renderer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/amazon'>amazon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/groupedRows'>grouped row&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/interactiveComponentExample'>interactive renderer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/componentNestedExample'>nested components&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
-            <NavItem to='/useLayoutEffectExample'>useLayoutEffectExample&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/materialUI'>materialUI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/materialUI2'>materialUI2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/slowRendererExample'>slowRendererExample&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/autoheightRendererExample'>autoheightRendererExample&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
         </ul>
     </div>
 );
@@ -73,14 +83,19 @@ class App extends Component {
                         <Route exact path='/flickerExample' component={flickerExample} />
                         <Route exact path='/flickerExample2' component={flickerExample2} />
                         <Route exact path='/flickerExample3' component={flickerExample3} />
+                        <Route exact path='/flickerExample4' component={flickerExample4} />
+                        <Route exact path='/contextFlicker' component={contextFlicker} />
                         <Route exact path='/memo' component={memoExample} />
+                        <Route exact path='/updateHookProps' component={updateHookProps} />
                         <Route exact path='/null' component={nullExample} />
                         <Route exact path='/amazon' component={amazonExample} />
                         <Route exact path='/groupedRows' component={groupedRowsExample} />
                         <Route exact path='/interactiveComponentExample' component={interactiveComponentExample} />
                         <Route exact path='/componentNestedExample' component={componentNestedExample} />
-                        <Route exact path='/useLayoutEffectExample' component={useLayoutEffectExample} />
+                        <Route exact path='/materialUI' component={materialUI} />
+                        <Route exact path='/materialUI2' component={materialUI2} />
                         <Route exact path='/slowRendererExample' component={slowRendererExample} />
+                        <Route exact path='/autoheightRendererExample' component={autoheightRendererExample} />
                     </Switch>
                 </div>
             </div>

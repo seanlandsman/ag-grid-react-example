@@ -38,7 +38,7 @@ export default function App() {
                 width: "600px"
             }}
         >
-            Memoized Functional Renderer
+             Functional Renderer
             <AgGridReact
                 columnDefs={columnDefs}
                 rowData={rowData}
