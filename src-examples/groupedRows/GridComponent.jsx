@@ -79,7 +79,6 @@ export default class GridExample extends Component {
 }
 
 class Renderer extends Component {
-
     refresh(params) {
         return true;
     }

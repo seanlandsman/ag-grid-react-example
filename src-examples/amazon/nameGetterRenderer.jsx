@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import {connect} from "react-redux";
 
 class NameRenderer extends Component {
     constructor(props) {
@@ -9,34 +8,34 @@ class NameRenderer extends Component {
             name: props.value.name,
         };
     }
-    
+
     componentWillReceiveProps = params => {
-      this.setState({
-        name: params.name
-      })
+        this.setState({
+            name: params.name
+        })
     }
-    
+
     handleOnChange = event => {
-      this.setState({
-        name: event.target.value,
-      })
+        this.setState({
+            name: event.target.value,
+        })
     };
-    
+
     handleSave = () => {
-      this.props.setValue({ name: this.state.name, id: this.props.value.id });
+        this.props.setValue({name: this.state.name, id: this.props.value.id});
     }
 
     render() {
         return (
-          <div>
-            <input
-              value={this.state.name}
-              onChange={this.handleOnChange}
-            />
-            <button onClick={this.handleSave}>
-              Save
-            </button>
-          </div>
+            <div>
+                <input
+                    value={this.state.name}
+                    onChange={this.handleOnChange}
+                />
+                <button onClick={this.handleSave}>
+                    Save
+                </button>
+            </div>
         );
     }
 };

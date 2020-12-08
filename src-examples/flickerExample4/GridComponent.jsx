@@ -9,24 +9,24 @@ export default class GridExample extends React.Component {
 
         this.state = {
             modules: AllModules,
-            columnDefs: [
-                    // {headerName: "Model", field: "model"},
-                {
-                    field: "price",
-                    cellRendererFramework: (cell) =>
-                        <div>{cell.value}</div>
-                }
-            ],
             // columnDefs: [
+            //         // {headerName: "Model", field: "model"},
             //     {
-            //         headerName: "Make",
-            //         field: "make",
+            //         field: "price",
             //         cellRendererFramework: (cell) =>
             //             <div>{cell.value}</div>
-            //     },
-            //     {headerName: "Model", field: "model"},
-            //     {headerName: "Price", field: "price"}
+            //     }
             // ],
+            columnDefs: [
+                {
+                    headerName: "Make",
+                    field: "make",
+                    cellRendererFramework: (cell) =>
+                        <div>{cell.value}</div>
+                },
+                {headerName: "Model", field: "model"},
+                {headerName: "Price", field: "price"}
+            ],
             rowData: this.createRowData(),
             defaultColDef: {resizable: true}
         };
@@ -35,8 +35,8 @@ export default class GridExample extends React.Component {
     createRowData() {
         return [
             {make: "Toyota", model: "Celica", price: Math.floor(Math.random() * 1000)},
-            // {make: "Ford", model: "Mondeo", price: Math.floor(Math.random() * 1000)},
-            // {make: "Porsche", model: "Boxter", price: Math.floor(Math.random() * 1000)},
+            {make: "Ford", model: "Mondeo", price: Math.floor(Math.random() * 1000)},
+            {make: "Porsche", model: "Boxter", price: Math.floor(Math.random() * 1000)},
         ]
     }
 

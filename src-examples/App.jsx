@@ -28,6 +28,9 @@ import slowRendererExample from './slowRendererExample/GridComponent';
 import autoheightRendererExample from './autoheightRendererExample/GridComponent';
 import materialUI from './materialUI/GridComponent';
 import materialUI2 from './materialUI2/GridComponent';
+import componentLeak from './componentLeak/GridComponent';
+import materialUITheme from './materialUITheme/GridComponent';
+import editorComponent from './editorComponent/GridComponent';
 
 const SideBar = () => (
     <div style={{float: "left", width: 335, marginRight: 25}}>
@@ -58,6 +61,9 @@ const SideBar = () => (
             <NavItem to='/materialUI2'>materialUI2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/slowRendererExample'>slowRendererExample&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/autoheightRendererExample'>autoheightRendererExample&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/componentLeak'>componentLeak&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/materialUITheme'>materialUITheme&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/editorComponent'>editorComponent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
         </ul>
     </div>
 );
@@ -96,6 +102,9 @@ class App extends Component {
                         <Route exact path='/materialUI2' component={materialUI2} />
                         <Route exact path='/slowRendererExample' component={slowRendererExample} />
                         <Route exact path='/autoheightRendererExample' component={autoheightRendererExample} />
+                        <Route exact path='/componentLeak' component={componentLeak} />
+                        <Route exact path='/materialUITheme' component={materialUITheme} />
+                        <Route exact path='/editorComponent' component={editorComponent} />
                     </Switch>
                 </div>
             </div>
