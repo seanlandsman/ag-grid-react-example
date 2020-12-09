@@ -148,7 +148,7 @@ export default class GridExample extends Component {
                     width: "600px"
                 }}
             >
-                Simple functional component (with NaN as a value)
+                Simple functional component (with NaN as a value) (force refresh - should still be no flicker)
                 <button onClick={() => this.gridApi.refreshCells({force: true})}>
                     Refresh Cells
                 </button>

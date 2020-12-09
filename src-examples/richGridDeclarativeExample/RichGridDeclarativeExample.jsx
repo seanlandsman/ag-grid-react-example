@@ -15,7 +15,6 @@ import "./RichGridDeclarativeExample.css";
 
 // for community features
 // import {AllCommunityModules} from "@ag-grid-community/all-modules";
-
 // for enterprise features
 import {AllModules} from "@ag-grid-enterprise/all-modules";
 
@@ -75,9 +74,10 @@ export default class RichGridDeclarativeExample extends Component {
     };
 
     invokeSkillsFilterMethod = () => {
-        let skillsFilter = this.api.getFilterInstance('skills');
-        let componentInstance = skillsFilter.getFrameworkComponentInstance();
-        componentInstance.helloFromSkillsFilter();
+        this.api.getFilterInstance('skills', (instance) => {
+            const componentInstance = instance.getFrameworkComponentInstance();
+            componentInstance.helloFromSkillsFilter();
+        });
     };
 
     dobFilter = () => {
@@ -132,7 +132,7 @@ export default class RichGridDeclarativeExample extends Component {
                 <h1>Rich Grid with Declarative Markup Example</h1>
                 <div style={{display: "inline-block", width: "100%"}}>
                     <div style={{float: "left"}}>
-                        <b>Employees Skills and Contact Details: </b>{ this.state.rowCount }
+                        <b>Employees Skills and Contact Details: </b>{this.state.rowCount}
                     </div>
                 </div>
                 <div style={{marginTop: 10}}>
@@ -172,11 +172,13 @@ export default class RichGridDeclarativeExample extends Component {
                     <div style={{display: "inline-block", width: "100%", marginTop: 10, marginBottom: 10}}>
                         <div style={{float: "left"}}>
                             <label htmlFor="sideBarToggle">Show Side Bar&nbsp;</label>
-                            <input type="checkbox" id="sideBarToggle" onChange={this.onToggleSidebar} style={{marginRight: 5}}/>
+                            <input type="checkbox" id="sideBarToggle" onChange={this.onToggleSidebar}
+                                   style={{marginRight: 5}}/>
                         </div>
                         <div style={{float: "right", marginLeft: 20}}>
                             <label htmlFor="quickFilter">Quick Filter:&nbsp;</label>
-                            <input type="text" id="quickFilter" onChange={this.onQuickFilterText} placeholder="Type text to filter..."/>
+                            <input type="text" id="quickFilter" onChange={this.onQuickFilterText}
+                                   placeholder="Type text to filter..."/>
                         </div>
                     </div>
                     <div style={{height: 400, width: 900}} className="ag-theme-balham">

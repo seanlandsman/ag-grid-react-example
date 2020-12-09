@@ -28,7 +28,8 @@ const Grid =  props => {
     ];
 
     return (
-        <div className="ag-theme-balham" style={{ height: "500px" }}>
+        <div className="ag-theme-balham" style={{ height: "350px" }}>
+            Last Name with flicker old value after editing - nature of this example
             <AgGridReact
                 onGridReady={handleGridReady}
                 rowData={props.data || []}
@@ -75,7 +76,7 @@ export default () => {
                 onDataChanged={handleDataChanged}
             />
 
-            <div className="actions">
+            <div style={{marginTop: 50}}>
                 Editing last name should update last name
                 <button onClick={handleAddRow}>Add Row</button>
             </div>

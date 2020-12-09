@@ -51,7 +51,7 @@ export default class GridExample extends React.Component {
                 <div className="outer-div">
                     <div className="button-bar">
                         <button onClick={() => this.agApi.refreshCells({force: true})}>
-                            Refresh Cells
+                            Refresh Cells (force refresh - should still be no flicker)
                         </button>
                     </div>
                     <div className="grid-wrapper">

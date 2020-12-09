@@ -9,14 +9,6 @@ export default class GridExample extends React.Component {
 
         this.state = {
             modules: AllModules,
-            // columnDefs: [
-            //         // {headerName: "Model", field: "model"},
-            //     {
-            //         field: "price",
-            //         cellRendererFramework: (cell) =>
-            //             <div>{cell.value}</div>
-            //     }
-            // ],
             columnDefs: [
                 {
                     headerName: "Make",
@@ -46,7 +38,7 @@ export default class GridExample extends React.Component {
                 <div className="outer-div">
                     <div className="button-bar">
                         <button onClick={() => this.setState({rowData: this.createRowData()})}>
-                            Refresh Cells (setRowData)
+                            Refresh Cells (setRowData - will be flicker (as refresh isn't called))
                         </button>
                     </div>
                     <div className="grid-wrapper">
@@ -60,7 +52,6 @@ export default class GridExample extends React.Component {
                             <AgGridReact
                                 modules={this.state.modules}
                                 columnDefs={this.state.columnDefs}
-                                suppressAnimationFrame={true}
                                 defaultColDef={this.state.defaultColDef}
                                 rowData={this.state.rowData}
                                 onGridReady={({api}) => this.agApi = api}

@@ -77,6 +77,7 @@ export default class extends Component {
         return (
             <div
                 className="ag-theme-balham" style={{height: 500, width: 500}}>
+                Should refresh cell component after editing
                 <AgGridReact
                     columnDefs={this.state.columnDefs}
                     onGridReady={this.onGridReady.bind(this)}
