@@ -56,7 +56,7 @@ export default class GridExample extends Component {
                     className="ag-theme-alpine"
                 >
                     <button onClick={() => this.gridApi.refreshCells({force: true})}>
-                        Refresh Cells
+                        Refresh Cells (will flicker as innerRendererFramework always rips out and replaces)
                     </button>
                     <AgGridReact
                         columnDefs={this.state.columnDefs}

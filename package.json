@@ -1,7 +1,7 @@
 {
   "name": "@ag-grid/seans-react-exam",
   "version": "23.1.0",
-  "description": "Example Reach applicaiton using ag-Grid.",
+  "description": "Example Reach applicaiton using AG Grid.",
   "main": "dist/ag-grid-react-example.js",
   "scripts": {
     "trader": "webpack-dev-server --content-base src-trader-dashboard/ --config config/webpack.config.trader.js --mode development --open",
@@ -38,7 +38,7 @@
   },
   "homepage": "http://www.ag-grid.com/",
   "devDependencies": {
-    "@ag-grid-community/core": "~24.1.0",
+    "@ag-grid-community/core": "^25.0.0",
     "@babel/core": "7.4.4",
     "@babel/plugin-proposal-class-properties": "7.4.4",
     "@babel/plugin-proposal-function-bind": "7.2.0",
@@ -64,8 +64,8 @@
     "@material-ui/icons": "4.9.1"
   },
   "dependencies": {
-    "@ag-grid-community/react": "~24.1.0",
-    "@ag-grid-enterprise/all-modules": "~24.1.0",
+    "@ag-grid-community/react": "^25.0.0",
+    "@ag-grid-enterprise/all-modules": "^25.0.0",
     "bootstrap": "4.3.1",
     "d3": "4.9.1",
     "immutable": "^4.0.0-rc.12",
