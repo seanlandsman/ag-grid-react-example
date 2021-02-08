@@ -11,7 +11,7 @@ class NameRenderer extends Component {
 
     componentWillReceiveProps = params => {
         this.setState({
-            name: params.name
+            name: params.value.name
         })
     }
 

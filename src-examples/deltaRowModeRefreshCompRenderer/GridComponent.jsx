@@ -5,10 +5,8 @@ import {AllModules} from "@ag-grid-enterprise/all-modules";
 const INITIAL_ROWS = 100;
 
 class FrameworkCellWithoutRefresh extends React.Component {
-    state = {value: this.props.value};
-
     render() {
-        return <b>{this.state.value}</b>;
+        return <b>{this.props.value}</b>;
     }
 }
 

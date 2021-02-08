@@ -38,7 +38,7 @@ export default class GridExample extends React.Component {
                 <div className="outer-div">
                     <div className="button-bar">
                         <button onClick={() => this.setState({rowData: this.createRowData()})}>
-                            Refresh Cells (setRowData - will be flicker (as refresh isn't called))
+                            Refresh Cells
                         </button>
                     </div>
                     <div className="grid-wrapper">
@@ -53,6 +53,8 @@ export default class GridExample extends React.Component {
                                 modules={this.state.modules}
                                 columnDefs={this.state.columnDefs}
                                 defaultColDef={this.state.defaultColDef}
+                                immutableData={true}
+                                getRowNodeId={data => data.make}
                                 rowData={this.state.rowData}
                                 onGridReady={({api}) => this.agApi = api}
                             />
