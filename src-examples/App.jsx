@@ -33,6 +33,7 @@ import editorComponent from './editorComponent/GridComponent';
 import contextComponent from './contextExample/GridComponent';
 import discreteUpdatesComponent from './discreteUpdatesExample/GridComponent';
 import frozenDataExample from './frozenDataExample/GridComponent';
+import dynamicColumnsExample from './dynamicColumnsExample/GridComponent';
 
 const SideBar = () => (
     <div style={{float: "left", width: 335, marginRight: 25}}>
@@ -67,6 +68,7 @@ const SideBar = () => (
             <NavItem to='/editorComponent'>editorComponent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/contextComponent'>contextComponent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/frozenDataExample'>frozenDataExample&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/dynamicColumnsExample'>dynamicColumnsExample&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
         </ul>
     </div>
 );
@@ -110,6 +112,7 @@ class App extends Component {
                         <Route exact path='/contextComponent' component={contextComponent} />
                         <Route exact path='/discreteUpdatesComponent' component={discreteUpdatesComponent} />
                         <Route exact path='/frozenDataExample' component={frozenDataExample} />
+                        <Route exact path='/dynamicColumnsExample' component={dynamicColumnsExample} />
                     </Switch>
                 </div>
             </div>
