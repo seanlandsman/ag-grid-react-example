@@ -30,6 +30,9 @@ import materialUI2 from './materialUI2/GridComponent';
 import componentLeak from './componentLeak/GridComponent';
 import materialUITheme from './materialUITheme/GridComponent';
 import editorComponent from './editorComponent/GridComponent';
+import contextComponent from './contextExample/GridComponent';
+import discreteUpdatesComponent from './discreteUpdatesExample/GridComponent';
+import frozenDataExample from './frozenDataExample/GridComponent';
 
 const SideBar = () => (
     <div style={{float: "left", width: 335, marginRight: 25}}>
@@ -62,6 +65,8 @@ const SideBar = () => (
             <NavItem to='/componentLeak'>componentLeak&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/materialUITheme'>materialUITheme&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
             <NavItem to='/editorComponent'>editorComponent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/contextComponent'>contextComponent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
+            <NavItem to='/frozenDataExample'>frozenDataExample&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</NavItem>
         </ul>
     </div>
 );
@@ -102,6 +107,9 @@ class App extends Component {
                         <Route exact path='/componentLeak' component={componentLeak} />
                         <Route exact path='/materialUITheme' component={materialUITheme} />
                         <Route exact path='/editorComponent' component={editorComponent} />
+                        <Route exact path='/contextComponent' component={contextComponent} />
+                        <Route exact path='/discreteUpdatesComponent' component={discreteUpdatesComponent} />
+                        <Route exact path='/frozenDataExample' component={frozenDataExample} />
                     </Switch>
                 </div>
             </div>
